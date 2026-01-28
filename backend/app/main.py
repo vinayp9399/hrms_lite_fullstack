@@ -11,5 +11,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://hrmslitefullstack.vercel.app",
+        "*"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(employees.router, prefix="/api/employees", tags=["Employees"])
 app.include_router(attendance.router, prefix="/api/attendance", tags=["Attendance"])

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Input, DataState } from '../components/UI';
 
-const API = 'http://localhost:8000/api/employees';
+const API = 'https://hrmslitebackend.vercel.app/api/employees';
 
 export default function EmployeePage() {
   const [emps, setEmps] = useState([]);
@@ -22,7 +22,7 @@ export default function EmployeePage() {
 
   const deleteemp=async(id)=>{
     await fetch(
-    `http://localhost:8000/api/employees/${id}`,
+    `https://hrmslitebackend.vercel.app/api/employees/${id}`,
     { method: "DELETE" }
     );
     load()

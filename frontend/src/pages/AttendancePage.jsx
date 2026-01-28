@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button, Input, DataState } from '../components/UI';
 
-const EMP_API = 'http://localhost:8000/api/employees';
-const ATT_BASE_API = 'http://localhost:8000/api/attendance';
+const EMP_API = 'https://hrmslitebackend.vercel.app/api/employees';
+const ATT_BASE_API = 'https://hrmslitebackend.vercel.app/api/attendance';
 
 export default function AttendancePage() {
   // --- Global State ---
