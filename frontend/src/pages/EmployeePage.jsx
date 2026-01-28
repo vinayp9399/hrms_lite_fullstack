@@ -21,7 +21,7 @@ export default function EmployeePage() {
   };
 
   const deleteemp=async(id)=>{
-    const res = await fetch(
+    await fetch(
     `http://localhost:8000/api/employees/${id}`,
     { method: "DELETE" }
     );

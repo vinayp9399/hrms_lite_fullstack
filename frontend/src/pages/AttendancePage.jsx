@@ -137,6 +137,7 @@ export default function AttendancePage() {
           </form>
 
           <div style={{ marginTop: '1.5rem' }}>
+          {loading && <></>}
             <DataState loading={isSearching} dataLength={history.length} type="records">
               <table className="pro-table">
                 <thead>
